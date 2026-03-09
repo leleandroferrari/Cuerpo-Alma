@@ -97,6 +97,7 @@ const Header = () => {
         </motion.nav>
         )}
       </AnimatePresence>
+      <ContactDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </header>
   );
 };
