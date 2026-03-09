@@ -15,6 +15,7 @@ interface HeroData {
 }
 
 const HeroSection = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 350]);
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
