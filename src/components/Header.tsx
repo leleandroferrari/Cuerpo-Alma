@@ -2,6 +2,7 @@ import { Leaf, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ContactDialog from "@/components/ContactDialog";
 
 const navLinks = [
   { label: "Home", href: "#book" },
