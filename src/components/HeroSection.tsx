@@ -3,6 +3,8 @@ import heroImageFallback from "@/assets/hero-physio.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { sanityClient, urlFor } from "@/lib/sanity";
+import { useState } from "react";
+import ContactDialog from "@/components/ContactDialog";
 
 interface HeroData {
   badgeText?: string;
@@ -13,6 +15,7 @@ interface HeroData {
 }
 
 const HeroSection = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 350]);
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
@@ -63,13 +66,18 @@ const HeroSection = () => {
             {subtitle}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-all h-14 px-8 text-base font-medium" asChild>
-              <a href="#book">Book Your Session</a>
+            <Button 
+              size="lg" 
+              className="rounded-full shadow-lg hover:shadow-xl transition-all h-14 px-8 text-base font-medium"
+              onClick={() => setDialogOpen(true)}
+            >
+              Contact Us
             </Button>
             <Button size="lg" variant="outline" className="rounded-full h-14 px-8 border-white/40 text-white hover:bg-white hover:text-black transition-all text-base font-medium backdrop-blur-sm bg-black/10" asChild>
               <a href="#services">View Our Services</a>
             </Button>
           </div>
+          <ContactDialog open={dialogOpen} onOpenChange={setDialogOpen} />
         </motion.div>
       </div>
     </section>

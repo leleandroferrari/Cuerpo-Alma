@@ -2,6 +2,7 @@ import { Leaf, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ContactDialog from "@/components/ContactDialog";
 
 const navLinks = [
   { label: "Home", href: "#book" },
@@ -13,6 +14,7 @@ const navLinks = [
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,8 +46,11 @@ const Header = () => {
               </a>
             ))}
           </div>
-          <Button asChild className="rounded-full shadow-md text-sm px-6 hover:shadow-lg transition-all">
-            <a href="#book">Book Appointment</a>
+          <Button 
+            onClick={() => setDialogOpen(true)}
+            className="rounded-full shadow-md text-sm px-6 hover:shadow-lg transition-all"
+          >
+            Contact Us
           </Button>
         </nav>
 
@@ -77,15 +82,22 @@ const Header = () => {
                   className="text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border/50 pb-2"
                 >
                   {l.label}
-                </a>
-              ))}
-              <Button asChild className="w-full rounded-full h-12 text-base shadow-md mt-4">
-                <a href="#book" onClick={() => setMobileOpen(false)}>Book Your Appointment</a>
-              </Button>
-            </div>
-          </motion.nav>
+              </a>
+            ))}
+            <Button 
+              onClick={() => {
+                setMobileOpen(false);
+                setDialogOpen(true);
+              }}
+              className="w-full rounded-full h-12 text-base shadow-md mt-4"
+            >
+              Contact Us
+            </Button>
+          </div>
+        </motion.nav>
         )}
       </AnimatePresence>
+      <ContactDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </header>
   );
 };
