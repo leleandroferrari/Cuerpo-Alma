@@ -24,8 +24,9 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <AboutSection />
         <ServicesSection />
+        <AboutSection />
+        <TestimonialsSection />
         <LocationSection />
       </main>
       <Footer />
