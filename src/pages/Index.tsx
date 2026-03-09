@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
