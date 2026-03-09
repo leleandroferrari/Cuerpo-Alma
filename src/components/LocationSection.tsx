@@ -111,10 +111,10 @@ const LocationSection = () => {
 
           {/* Map */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            initial={{ opacity: 0, x: 40, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1], delay: 0.4 }}
             className="overflow-hidden rounded-3xl border border-border/50 shadow-lg h-full min-h-[400px]"
           >
             <iframe
