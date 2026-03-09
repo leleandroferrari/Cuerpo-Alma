@@ -23,9 +23,9 @@ const Footer = () => (
       </p>
 
       <div className="flex gap-4 text-muted-foreground">
-        <a href="#" aria-label="Facebook" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Facebook className="h-5 w-5" /></a>
-        <a href="#" aria-label="Instagram" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Instagram className="h-5 w-5" /></a>
-        <a href="#" aria-label="LinkedIn" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Linkedin className="h-5 w-5" /></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Facebook className="h-5 w-5" /></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Instagram className="h-5 w-5" /></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Linkedin className="h-5 w-5" /></a>
       </div>
     </motion.div>
   </footer>
