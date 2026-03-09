@@ -69,31 +69,6 @@ const AboutSection = () => {
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-sm"
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Our Mission
-            </h3>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              At Elite Physio, we believe everyone deserves to live an active, pain-free life. 
-              Our mission is to provide exceptional physiotherapy services that empower our patients 
-              to achieve optimal health and wellness. Through evidence-based treatments, continuous 
-              education, and genuine care, we're committed to being your trusted partner on the 
-              journey to recovery and beyond.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Whether you're recovering from an injury, managing a chronic condition, or looking 
-              to enhance your physical performance, we're here to support you every step of the way.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
