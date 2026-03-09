@@ -71,14 +71,20 @@ const containerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
     },
   },
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] } 
+  },
 };
 
 const ServicesSection = () => {
@@ -99,10 +105,10 @@ const ServicesSection = () => {
     <section id="services" className="bg-section-alt py-24 md:py-32">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
           <span className="inline-block mb-3 text-sm font-semibold tracking-wider text-muted-foreground uppercase">{badgeText}</span>

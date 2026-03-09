@@ -55,10 +55,10 @@ const LocationSection = () => {
     <section id="location" className="py-24 md:py-32 bg-background">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
           <span className="inline-block mb-3 text-sm font-semibold tracking-wider text-muted-foreground uppercase">{badgeText}</span>
@@ -71,10 +71,10 @@ const LocationSection = () => {
         <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Details */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            initial={{ opacity: 0, x: -40, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1], delay: 0.2 }}
             className="space-y-10 rounded-3xl bg-section-alt p-8 md:p-12 border border-border/50 shadow-sm"
           >
             {detailsList.map((d) => (
@@ -111,10 +111,10 @@ const LocationSection = () => {
 
           {/* Map */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            initial={{ opacity: 0, x: 40, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1], delay: 0.4 }}
             className="overflow-hidden rounded-3xl border border-border/50 shadow-lg h-full min-h-[400px]"
           >
             <iframe
