@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { useState } from "react";
 import ContactDialog from "@/components/ContactDialog";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 interface HeroData {
   badgeText?: string;
@@ -29,59 +30,109 @@ const HeroSection = () => {
     },
   });
 
-  const badgeText = heroData?.badgeText || "Premium Physiotherapy Care";
-  const title = heroData?.title || "Move Better,\nLive Pain‑Free.";
-  const subtitle = heroData?.subtitle || "Expert, personalised physiotherapy care tailored to your body. Whether you're recovering from surgery or chasing a personal best, we're here every step of the way.";
+  const badgeText = heroData?.badgeText || "Innovating Personal Wellness";
+  const title = heroData?.title || "Reclaim Your Vitality.";
+  const subtitle = heroData?.subtitle || "Jose Barassa combines advanced biomechanic stimulation with specialized frequency therapy to restore your body balance and unlock peak physical potential.";
   const imageUrl = heroData?.image ? urlFor(heroData.image).url() : heroImageFallback;
 
   return (
-    <section id="book" className="relative overflow-hidden min-h-[90vh] flex items-center">
-      <div className="absolute inset-0">
+    <section id="book" className="relative overflow-hidden min-h-screen flex items-center">
+      <div className="absolute inset-0 z-0">
         <motion.img
           style={{ y: y1 }}
-          initial={{ scale: 1.1 }}
+          initial={{ scale: 1.15 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
           src={imageUrl}
-          alt="Modern physiotherapy clinic interior"
+          alt="Modern vitality clinic"
           className="h-[120%] w-full object-cover origin-top"
         />
-        <div className="absolute inset-0 bg-hero-overlay/60 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 backdrop-blur-[1px]" />
       </div>
-      <div className="container relative z-10 py-24 md:py-40">
+
+      <div className="container relative z-10 pt-32 pb-20 md:pt-48 md:pb-32">
         <motion.div
           style={{ y: y2, opacity }}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="max-w-3xl"
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          className="max-w-4xl"
         >
-          <span className="inline-block mb-4 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md border border-white/20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            className="inline-flex items-center gap-2 mb-6 rounded-full bg-primary/20 backdrop-blur-xl border border-primary/30 px-5 py-2 text-xs font-bold tracking-widest text-white uppercase"
+          >
+            <Sparkles className="w-3 h-3 text-primary-foreground" />
             {badgeText}
-          </span>
-          <h1 className="text-5xl font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl whitespace-pre-line">
-            {title}
+          </motion.div>
+
+          <h1 className="text-5xl font-black tracking-tight text-white md:text-7xl lg:text-8xl whitespace-pre-line leading-[1.1]">
+            {title.split('\n').map((line, i) => (
+              <span key={i} className="block overflow-hidden">
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  className="block"
+                >
+                  {line}
+                </motion.span>
+              </span>
+            ))}
           </h1>
-          <p className="mt-6 text-lg text-white/90 md:text-xl font-light leading-relaxed max-w-2xl">
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="mt-8 text-xl text-white/80 md:text-2xl font-light leading-relaxed max-w-2xl"
+          >
             {subtitle}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button 
-              size="lg" 
-              className="rounded-full shadow-lg hover:shadow-xl transition-all h-14 px-8 text-base font-medium"
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="mt-12 flex flex-wrap gap-5"
+          >
+            <Button
+              size="lg"
+              className="rounded-2xl shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all h-16 px-10 text-sm font-bold uppercase tracking-widest group"
               onClick={() => setDialogOpen(true)}
             >
-              Contact Us
+              Book Consultation
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full h-14 px-8 border-white/40 text-white hover:bg-white hover:text-black transition-all text-base font-medium backdrop-blur-sm bg-black/10" asChild>
-              <a href="#services">View Our Services</a>
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-2xl h-16 px-10 border-white/20 text-white hover:bg-white hover:text-black transition-all text-sm font-bold uppercase tracking-widest backdrop-blur-md bg-white/5"
+              asChild
+            >
+              <a href="#services">Explore Services</a>
             </Button>
-          </div>
+          </motion.div>
+
           <ContactDialog open={dialogOpen} onOpenChange={setDialogOpen} />
         </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent opacity-50" />
+        <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">Scroll</span>
+      </motion.div>
     </section>
   );
 };
 
 export default HeroSection;
+

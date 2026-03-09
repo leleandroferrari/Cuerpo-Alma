@@ -21,12 +21,6 @@ const Footer = () => (
         © {new Date().getFullYear()} Elite Physiotherapy. All rights reserved. ·{" "}
         <a href="#" className="underline decoration-border underline-offset-4 hover:decoration-primary transition-colors">Privacy Policy</a>
       </p>
-
-      <div className="flex gap-4 text-muted-foreground">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Facebook className="h-5 w-5" /></a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Instagram className="h-5 w-5" /></a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-section-alt hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"><Linkedin className="h-5 w-5" /></a>
-      </div>
     </motion.div>
   </footer>
 );

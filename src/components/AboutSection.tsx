@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Award, Users, Target } from "lucide-react";
+import { Heart, Award, Users, Target, Sparkles } from "lucide-react";
 
 const aboutFeatures = [
   {
@@ -9,69 +9,79 @@ const aboutFeatures = [
   },
   {
     icon: Award,
-    title: "Expert Team",
-    description: "Our highly qualified physiotherapists bring years of experience and stay current with the latest treatment techniques and research."
+    title: "Expertise & Innovation",
+    description: "Combining years of clinical experience with innovative technologies like BMS and Frequency Therapy for superior results."
   },
   {
     icon: Users,
-    title: "Community Focus",
-    description: "We're proud to serve our local community, building lasting relationships and helping neighbors achieve their health goals."
+    title: "Holistic Approach",
+    description: "We believe in treating the person, not just the symptoms, integrating physical, systemic, and energetic wellness."
   },
   {
     icon: Target,
     title: "Results-Driven",
-    description: "We focus on measurable outcomes and functional improvements, ensuring you can return to the activities you love."
+    description: "Our focus is on measurable improvements, ensuring you can return to your peak performance and daily life with confidence."
   }
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-section-alt">
+    <section id="about" className="py-24 md:py-32 bg-background relative overflow-hidden">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About Elite Physio.
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dedicated to helping you move better, recover faster, and live pain-free. 
-            Our expert team combines cutting-edge techniques with compassionate care.
-          </p>
-        </motion.div>
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+            viewport={{ once: true }}
+            className="lg:w-1/2"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
+              <Sparkles className="w-3 h-3" />
+              Our Philosophy
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
+              Experience the Future of <br />
+              <span className="text-primary italic">Vitality & Healing.</span>
+            </h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                At <span className="text-foreground font-semibold">Jose Barassa's Vitality Clinic</span>, we bridge the gap between traditional therapeutic excellence and cutting-edge wellness technologies.
+              </p>
+              <p>
+                Our mission is to empower individuals through a multi-dimensional approach to health. By integrating Biomechanic Stimulation, Frequency Therapy, and personalized consulting, we unlock your body's innate potential for recovery and performance.
+              </p>
+            </div>
+          </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
-          {aboutFeatures.map((feature, idx) => {
-            const Icon = feature.icon;
-            return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: idx * 0.15,
-                  ease: [0.25, 0.4, 0.25, 1]
-                }}
-                viewport={{ once: true, margin: "-80px" }}
-                className="group bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            );
-          })}
+          <div className="lg:w-1/2 grid gap-6 sm:grid-cols-2">
+            {aboutFeatures.map((feature, idx) => {
+              const Icon = feature.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: idx * 0.1,
+                  }}
+                  viewport={{ once: true }}
+                  className="group bg-white border border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 transition-all duration-500 shadow-sm">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -79,3 +89,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

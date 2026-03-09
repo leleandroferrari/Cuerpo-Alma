@@ -3,31 +3,35 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Marathon Runner",
+    name: "Marcus Aurelius",
+    role: "Professional Athlete",
+    image: "/avatars/marcus.png",
     quote:
-      "After my knee injury, I thought my running days were over. The team at Elite Physio not only got me back on track but helped me set a new personal best.",
+      "The Sport Massage and BMS sessions at Jose's clinic have been a game-changer for my recovery. I feel more explosive and my muscle tension is virtually gone.",
     rating: 5,
   },
   {
-    name: "James O'Connor",
-    role: "Office Professional",
+    name: "Elena Fischer",
+    role: "Wellness Advocate",
+    image: "/avatars/elena.png",
     quote:
-      "Years of desk work left me with chronic back pain. The posture correction program here completely transformed my daily comfort and productivity.",
+      "Frequency Therapy with Biophotonlight sounded futuristic, but the results were almost immediate. My sleep quality and energy levels have never been better.",
     rating: 5,
   },
   {
-    name: "Emily Chen",
-    role: "Yoga Instructor",
+    name: "Thomas Mueller",
+    role: "Chronic Pain Patient",
+    image: "/avatars/thomas.png",
     quote:
-      "The manual therapy sessions were incredible. The therapists truly understand the body and provided relief I hadn't found anywhere else.",
+      "After years of back issues, the Combination of Schröpfen and Bioplasmatic treatment finally provided the relief I needed. Truly a holistic healing experience.",
     rating: 5,
   },
   {
-    name: "David Kowalski",
-    role: "Post-Surgery Patient",
+    name: "Sophia Chen",
+    role: "Corporate Executive",
+    image: "/avatars/sophia.png",
     quote:
-      "My post-op recovery was seamless thanks to their structured rehabilitation plan. I felt supported and motivated every step of the way.",
+      "Health Consulting with Jose helped me restructure my lifestyle for sustainable vitality. The personalized approach is unlike anything else I've tried.",
     rating: 5,
   },
 ];
@@ -52,8 +56,8 @@ const itemVariants: Variants = {
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-background">
-      <div className="container">
+    <section id="testimonials" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,10 +69,11 @@ const TestimonialsSection = () => {
             Testimonials
           </span>
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl text-foreground">
-            What Our Patients Say
+            Trusted by Leaders <br />
+            <span className="text-primary italic">& Future Seekers.</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            Real stories from real people who trusted us with their recovery.
+            Real stories of transformation from clients who experience the power of advanced vitality care.
           </p>
         </motion.div>
 
@@ -83,10 +88,13 @@ const TestimonialsSection = () => {
             <motion.article
               variants={itemVariants}
               key={idx}
-              className="group relative rounded-2xl border border-border/50 bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-border"
+              className="group relative rounded-3xl border border-border/40 bg-white/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:bg-white hover:border-primary/20"
             >
-              <Quote className="absolute top-6 right-6 h-8 w-8 text-muted-foreground/15" />
-              <div className="flex gap-1 mb-4">
+              <div className="absolute top-8 right-8 text-primary/10 group-hover:text-primary/20 transition-colors">
+                <Quote className="h-12 w-12" />
+              </div>
+
+              <div className="flex gap-1 mb-6">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star
                     key={i}
@@ -94,12 +102,23 @@ const TestimonialsSection = () => {
                   />
                 ))}
               </div>
-              <p className="text-base leading-relaxed text-muted-foreground mb-6 italic">
+
+              <p className="text-lg leading-relaxed text-foreground/80 mb-8 italic relative z-10">
                 "{t.quote}"
               </p>
-              <div>
-                <p className="font-semibold text-foreground">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
+
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-2xl overflow-hidden border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-lg">{t.name}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-primary/60">{t.role}</p>
+                </div>
               </div>
             </motion.article>
           ))}
@@ -110,3 +129,4 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+
