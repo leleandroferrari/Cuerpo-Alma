@@ -46,8 +46,11 @@ const Header = () => {
               </a>
             ))}
           </div>
-          <Button asChild className="rounded-full shadow-md text-sm px-6 hover:shadow-lg transition-all">
-            <a href="#book">Book Appointment</a>
+          <Button 
+            onClick={() => setDialogOpen(true)}
+            className="rounded-full shadow-md text-sm px-6 hover:shadow-lg transition-all"
+          >
+            Contact Us
           </Button>
         </nav>
 
