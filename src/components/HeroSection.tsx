@@ -3,6 +3,8 @@ import heroImageFallback from "@/assets/hero-physio.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { sanityClient, urlFor } from "@/lib/sanity";
+import { useState } from "react";
+import ContactDialog from "@/components/ContactDialog";
 
 interface HeroData {
   badgeText?: string;
