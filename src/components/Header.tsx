@@ -82,13 +82,19 @@ const Header = () => {
                   className="text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border/50 pb-2"
                 >
                   {l.label}
-                </a>
-              ))}
-              <Button asChild className="w-full rounded-full h-12 text-base shadow-md mt-4">
-                <a href="#book" onClick={() => setMobileOpen(false)}>Book Your Appointment</a>
-              </Button>
-            </div>
-          </motion.nav>
+              </a>
+            ))}
+            <Button 
+              onClick={() => {
+                setMobileOpen(false);
+                setDialogOpen(true);
+              }}
+              className="w-full rounded-full h-12 text-base shadow-md mt-4"
+            >
+              Contact Us
+            </Button>
+          </div>
+        </motion.nav>
         )}
       </AnimatePresence>
     </header>
