@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Home", href: "#book" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
+  { label: "The Owner", href: "#owner" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Location", href: "#location" },
 ];
@@ -28,8 +29,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-500 ease-in-out ${isScrolled
-          ? "bg-white/70 backdrop-blur-md border-b border-border/40 shadow-sm py-4"
-          : "bg-transparent py-8"
+        ? "bg-white/70 backdrop-blur-md border-b border-border/40 shadow-sm py-4"
+        : "bg-transparent py-8"
         }`}
     >
       <div className="container flex items-center justify-between">
