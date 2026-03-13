@@ -4,34 +4,34 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Marcus Aurelius",
-    role: "Professional Athlete",
+    role: "Profisportler",
     image: "/avatars/marcus.png",
     quote:
-      "The Sport Massage and BMS sessions at Jose's clinic have been a game-changer for my recovery. I feel more explosive and my muscle tension is virtually gone.",
+      "Die Sportmassage- und BMS-Sitzungen in Joses Klinik waren ausschlaggebend für meine Erholung. Ich fühle mich explosiver und meine Muskelspannungen sind praktisch verschwunden.",
     rating: 5,
   },
   {
     name: "Elena Fischer",
-    role: "Wellness Advocate",
+    role: "Wellness-Befürworterin",
     image: "/avatars/elena.png",
     quote:
-      "Frequency Therapy with Biophotonlight sounded futuristic, but the results were almost immediate. My sleep quality and energy levels have never been better.",
+      "Frequenztherapie mit Biophotonlight klang futuristisch, aber die Ergebnisse waren fast unmittelbar zu spüren. Meine Schlafqualität und mein Energieniveau waren noch nie besser.",
     rating: 5,
   },
   {
     name: "Thomas Mueller",
-    role: "Chronic Pain Patient",
+    role: "Patient mit chronischen Schmerzen",
     image: "/avatars/thomas.png",
     quote:
-      "After years of back issues, the Combination of Schröpfen and Bioplasmatic treatment finally provided the relief I needed. Truly a holistic healing experience.",
+      "Nach Jahren mit Rückenproblemen hat die Kombination aus Schröpfen und bioplasmatischer Behandlung endlich die Linderung verschafft, die ich brauchte. Wahrlich eine ganzheitliche Heilerfahrung.",
     rating: 5,
   },
   {
     name: "Sophia Chen",
-    role: "Corporate Executive",
+    role: "Unternehmensführung",
     image: "/avatars/sophia.png",
     quote:
-      "Health Consulting with Jose helped me restructure my lifestyle for sustainable vitality. The personalized approach is unlike anything else I've tried.",
+      "Die Gesundheitsberatung bei Jose hat mir geholfen, meinen Lebensstil für nachhaltige Vitalität neu zu strukturieren. Der personalisierte Ansatz ist mit nichts zu vergleichen, was ich bisher ausprobiert habe.",
     rating: 5,
   },
 ];
@@ -66,14 +66,14 @@ const TestimonialsSection = () => {
           className="mx-auto max-w-2xl text-center mb-16"
         >
           <span className="inline-block mb-3 text-sm font-semibold tracking-wider text-muted-foreground uppercase">
-            Testimonials
+            Referenzen
           </span>
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl text-foreground">
-            Trusted by Leaders <br />
-            <span className="text-primary italic">& Future Seekers.</span>
+            Geschätzt von Führungspersönlichkeiten <br />
+            <span className="text-primary italic">& Zukunftssuchenden.</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            Real stories of transformation from clients who experience the power of advanced vitality care.
+            Echte Transformationsgeschichten von Klienten, die die Kraft fortschrittlicher Vitalitätspflege erleben.
           </p>
         </motion.div>
 

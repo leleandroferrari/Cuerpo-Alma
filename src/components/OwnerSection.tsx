@@ -15,27 +15,27 @@ const OwnerSection = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
                             <User className="w-3 h-3" />
-                            Meet Jose Barassa
+                            Lernen Sie Jose Barassa kennen
                         </div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
-                            The Heart Behind the <br />
+                            Das Herz hinter der <br />
                             <span className="text-primary italic">Vitality Clinic.</span>
                         </h2>
                         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                             <p>
-                                Jose Barassa is the founder and lead therapist at the Vitality Clinic, bringing over two decades of clinical expertise in human performance and recovery. His journey began with a simple belief: that every individual has an innate capacity for healing if given the right tools and guidance.
+                                Jose Barassa ist der Gründer und leitende Therapeut der Vitality Clinic und verfügt über mehr als zwei Jahrzehnte klinische Erfahrung im Bereich menschlicher Leistung und Erholung. Seine Reise begann mit der einfachen Überzeugung: dass jeder Einzelne eine angeborene Fähigkeit zur Heilung besitzt, wenn ihm die richtigen Werkzeuge und Anleitungen gegeben werden.
                             </p>
                             <p>
-                                Inspired by his own journey through physical rehabilitation, Jose dedicated his life to mastering biomechanics and energetic therapy. Today, he combines traditional clinical wisdom with cutting-edge technologies like BMS and Frequency Therapy to help clients achieve results they never thought possible.
+                                Inspiriert durch seine eigene Erfahrung mit körperlicher Rehabilitation, widmete Jose sein Leben der Beherrschung von Biomechanik und energetischer Therapie. Heute kombiniert er traditionelles klinisches Wissen mit modernsten Technologien wie BMS und Frequenztherapie, um seinen Klienten zu Ergebnissen zu verhelfen, die sie nie für möglich gehalten hätten.
                             </p>
                             <p>
-                                "At the end of the day, my goal is to see you move better, feel stronger, and live with more vitality than you did yesterday. Your journey to wellness is personal, and I am honored to be a part of it."
+                                "Letztendlich ist es mein Ziel, dass Sie sich besser bewegen, sich stärker fühlen und mit mehr Vitalität leben als gestern. Ihr Weg zum Wohlbefinden ist persönlich, und ich fühle mich geehrt, ein Teil davon zu sein."
                             </p>
                         </div>
 
                         <div className="mt-10 p-6 bg-white rounded-2xl border border-border/50 shadow-sm relative italic text-foreground/80">
                             <Quote className="absolute -top-4 -left-4 w-10 h-10 text-primary/20" />
-                            I believe in a world where everyone has access to the best version of themselves.
+                            Ich glaube an eine Welt, in der jeder Zugang zur besten Version seiner selbst hat.
                         </div>
                     </motion.div>
 

@@ -21,9 +21,9 @@ const fallbackDetails = {
 };
 
 const fallbackHours = [
-  { day: "Monday – Friday", time: "08:30 – 19:30" },
-  { day: "Saturday", time: "09:00 – 14:00" },
-  { day: "Sunday", time: "Closed" },
+  { day: "Montag – Freitag", time: "08:30 – 19:30" },
+  { day: "Samstag", time: "09:00 – 14:00" },
+  { day: "Sonntag", time: "Geschlossen" },
 ];
 
 const LocationSection = () => {
@@ -35,9 +35,9 @@ const LocationSection = () => {
     },
   });
 
-  const badgeText = locationData?.badgeText || "Find Us";
-  const sectionTitle = locationData?.title || "Visit Our Clinic";
-  const sectionDescription = locationData?.description || "Experience professional care in a modern, serene environment designed for your comfort and recovery.";
+  const badgeText = locationData?.badgeText || "So finden Sie uns";
+  const sectionTitle = locationData?.title || "Besuchen Sie unsere Klinik";
+  const sectionDescription = locationData?.description || "Erleben Sie professionelle Pflege in einer modernen, ruhigen Umgebung, die für Ihren Komfort und Ihre Erholung konzipiert wurde.";
 
   const address = locationData?.address || fallbackDetails.address;
   const phone = locationData?.phone || fallbackDetails.phone;
@@ -46,10 +46,10 @@ const LocationSection = () => {
   const mapEmbedUrl = locationData?.mapEmbedUrl || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115165.4678225585!2d8.448057283407983!3d47.37743360667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9749bea219%3A0xe63ee62d11013f37!2sZurich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1710000000000!5m2!1sen!2sch";
 
   const detailsList = [
-    { icon: MapPin, label: "Address", value: address },
-    { icon: Phone, label: "Phone", value: phone },
+    { icon: MapPin, label: "Adresse", value: address },
+    { icon: Phone, label: "Telefon", value: phone },
     { icon: MessageCircle, label: "WhatsApp", value: phone },
-    { icon: Mail, label: "Email", value: email },
+    { icon: Mail, label: "E-Mail", value: email },
   ];
 
   return (
@@ -102,7 +102,7 @@ const LocationSection = () => {
                 <Clock className="h-6 w-6" />
               </div>
               <div className="w-full pt-1">
-                <p className="text-xs font-black uppercase tracking-widest text-primary/60 mb-4">Opening Hours</p>
+                <p className="text-xs font-black uppercase tracking-widest text-primary/60 mb-4">Öffnungszeiten</p>
                 <ul className="space-y-4">
                   {hours.map((h) => (
                     <li key={h.day} className="flex justify-between items-center gap-6 group/item">
@@ -125,7 +125,7 @@ const LocationSection = () => {
           >
             <div className="absolute inset-0 bg-primary/5 mix-blend-multiply pointer-events-none z-10" />
             <iframe
-              title="Clinic location"
+              title="Standort der Klinik"
               src={mapEmbedUrl}
               className="h-full w-full border-0 filter grayscale-[40%] contrast-110 transition-all duration-1000 hover:grayscale-0 hover:contrast-100"
               loading="lazy"
@@ -140,9 +140,9 @@ const LocationSection = () => {
           transition={{ delay: 0.6, duration: 1 }}
           className="mt-20 text-center"
         >
-          <p className="text-sm font-bold tracking-[0.3em] text-primary/40 uppercase mb-2">Quote of the month</p>
+          <p className="text-sm font-bold tracking-[0.3em] text-primary/40 uppercase mb-2">Zitat des Monats</p>
           <p className="text-lg text-muted-foreground italic font-light">
-            "Your body is a temple, but only if you treat it as one. Vitality is the reward for mindful living."
+            "Ihr Körper ist ein Tempel, aber nur, wenn Sie ihn als solchen behandeln. Vitalität ist der Lohn für achtsames Leben."
           </p>
         </motion.div>
       </div>

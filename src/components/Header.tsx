@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import ContactDialog from "@/components/ContactDialog";
 
 const navLinks = [
-  { label: "Home", href: "#book" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "The Owner", href: "#owner" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Location", href: "#location" },
+  { label: "Startseite", href: "#book" },
+  { label: "Dienstleistungen", href: "#services" },
+  { label: "Über uns", href: "#about" },
+  { label: "Der Inhaber", href: "#owner" },
+  { label: "Referenzen", href: "#testimonials" },
+  { label: "Standort", href: "#location" },
 ];
 
 const Header = () => {
@@ -67,7 +67,7 @@ const Header = () => {
             className="rounded-full shadow-lg hover:shadow-primary/20 transition-all font-bold text-xs uppercase tracking-widest px-8"
           >
             <Phone className="w-3 h-3 mr-2" />
-            Contact
+            Kontakt
           </Button>
         </nav>
 
@@ -111,7 +111,7 @@ const Header = () => {
                 }}
                 className="w-full rounded-2xl h-14 text-xs font-bold uppercase tracking-widest shadow-xl mt-4"
               >
-                Contact Us
+                Kontaktieren Sie uns
               </Button>
             </div>
           </motion.nav>

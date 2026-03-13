@@ -30,9 +30,9 @@ const HeroSection = () => {
     },
   });
 
-  const badgeText = heroData?.badgeText || "Innovating Personal Wellness";
-  const title = heroData?.title || "Reclaim Your Vitality.";
-  const subtitle = heroData?.subtitle || "Jose Barassa combines advanced biomechanic stimulation with specialized frequency therapy to restore your body balance and unlock peak physical potential.";
+  const badgeText = heroData?.badgeText || "Innovative persönliche Wellness";
+  const title = heroData?.title || "Holen Sie sich Ihre\nVitalität zurück.";
+  const subtitle = heroData?.subtitle || "Jose Barassa kombiniert fortschrittliche biomechanische Stimulation mit spezialisierter Frequenztherapie, um Ihr Körpergleichgewicht wiederherzustellen und Ihr volles körperliches Potenzial freizusetzen.";
   const imageUrl = heroData?.image ? urlFor(heroData.image).url() : heroImageFallback;
 
   return (
@@ -44,7 +44,7 @@ const HeroSection = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
           src={imageUrl}
-          alt="Modern vitality clinic"
+          alt="Moderne Vitalitätsklinik"
           className="h-[120%] w-full object-cover origin-top"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 backdrop-blur-[1px]" />
@@ -70,7 +70,7 @@ const HeroSection = () => {
 
           <h1 className="text-5xl font-black tracking-tight text-white md:text-7xl lg:text-8xl whitespace-pre-line leading-[1.1]">
             {title.split('\n').map((line, i) => (
-              <span key={i} className="block overflow-hidden">
+              <span key={i} className="block overflow-hidden pb-2">
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
@@ -103,7 +103,7 @@ const HeroSection = () => {
               className="rounded-2xl shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all h-16 px-10 text-sm font-bold uppercase tracking-widest group"
               onClick={() => setDialogOpen(true)}
             >
-              Book Consultation
+              Beratungstermin buchen
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -112,7 +112,7 @@ const HeroSection = () => {
               className="rounded-2xl h-16 px-10 border-white/20 text-white hover:bg-white hover:text-black transition-all text-sm font-bold uppercase tracking-widest backdrop-blur-md bg-white/5"
               asChild
             >
-              <a href="#services">Explore Services</a>
+              <a href="#services">Dienstleistungen entdecken</a>
             </Button>
           </motion.div>
 
@@ -128,7 +128,7 @@ const HeroSection = () => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent opacity-50" />
-        <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">Scroll</span>
+        <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">Scrollen</span>
       </motion.div>
     </section>
   );

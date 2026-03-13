@@ -4,23 +4,23 @@ import { Heart, Award, Users, Target, Sparkles } from "lucide-react";
 const aboutFeatures = [
   {
     icon: Heart,
-    title: "Patient-Centered Care",
-    description: "We put your health and wellness at the center of everything we do, creating personalized treatment plans tailored to your unique needs."
+    title: "Patientenzentrierte Pflege",
+    description: "Ihre Gesundheit und Ihr Wohlbefinden stehen im Mittelpunkt unseres Handelns. Wir erstellen personalisierte Behandlungspläne, die auf Ihre individuellen Bedürfnisse zugeschnitten sind."
   },
   {
     icon: Award,
     title: "Expertise & Innovation",
-    description: "Combining years of clinical experience with innovative technologies like BMS and Frequency Therapy for superior results."
+    description: "Kombination jahrelanger klinischer Erfahrung mit innovativen Technologien wie BMS und Frequenztherapie für erstklassige Ergebnisse."
   },
   {
     icon: Users,
-    title: "Holistic Approach",
-    description: "We believe in treating the person, not just the symptoms, integrating physical, systemic, and energetic wellness."
+    title: "Ganzheitlicher Ansatz",
+    description: "Wir glauben daran, den Menschen zu behandeln, nicht nur die Symptome, und integrieren körperliches, systemisches und energetisches Wohlbefinden."
   },
   {
     icon: Target,
-    title: "Results-Driven",
-    description: "Our focus is on measurable improvements, ensuring you can return to your peak performance and daily life with confidence."
+    title: "Ergebnisorientiert",
+    description: "Unser Fokus liegt auf messbaren Verbesserungen, damit Sie mit Zuversicht zu Ihrer Höchstleistung und Ihrem täglichen Leben zurückkehren können."
   }
 ];
 
@@ -38,18 +38,18 @@ const AboutSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
               <Sparkles className="w-3 h-3" />
-              Our Philosophy
+              Unsere Philosophie
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
-              Experience the Future of <br />
-              <span className="text-primary italic">Vitality & Healing.</span>
+              Erleben Sie die Zukunft von <br />
+              <span className="text-primary italic">Vitalität & Heilung.</span>
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                At <span className="text-foreground font-semibold">Jose Barassa's Vitality Clinic</span>, we bridge the gap between traditional therapeutic excellence and cutting-edge wellness technologies.
+                In <span className="text-foreground font-semibold">Jose Barassas Vitality Clinic</span> schlagen wir die Brücke zwischen traditioneller therapeutischer Exzellenz und modernsten Wellness-Technologien.
               </p>
               <p>
-                Our mission is to empower individuals through a multi-dimensional approach to health. By integrating Biomechanic Stimulation, Frequency Therapy, and personalized consulting, we unlock your body's innate potential for recovery and performance.
+                Unsere Mission ist es, Menschen durch einen mehrdimensionalen Gesundheitsansatz zu stärken. Durch die Integration von biomechanischer Stimulation, Frequenztherapie und personalisierter Beratung setzen wir das körpereigene Potenzial für Erholung und Leistung frei.
               </p>
             </div>
           </motion.div>
