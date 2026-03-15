@@ -44,7 +44,7 @@ const Header = () => {
             </span>
           </div>
           <span className="text-[10px] font-bold tracking-[0.2em] text-primary uppercase ml-10 -mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
-            Vitality Clinic
+            Cuerpo-alma
           </span>
         </a>
 

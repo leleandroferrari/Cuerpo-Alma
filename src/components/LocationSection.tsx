@@ -17,7 +17,7 @@ interface LocationData {
 const fallbackDetails = {
   address: "Premium Wellness Plaza, Suite 402\nCity Health District",
   phone: "+41 (0) 123 456 789",
-  email: "contact@barassa-vitality.com",
+  email: "kontakt@cuerpo-alma.ch",
 };
 
 const fallbackHours = [
@@ -36,7 +36,7 @@ const LocationSection = () => {
   });
 
   const badgeText = locationData?.badgeText || "So finden Sie uns";
-  const sectionTitle = locationData?.title || "Besuchen Sie unsere Klinik";
+  const sectionTitle = locationData?.title || "Besuchen Sie meine Praxis";
   const sectionDescription = locationData?.description || "Erleben Sie professionelle Pflege in einer modernen, ruhigen Umgebung, die für Ihren Komfort und Ihre Erholung konzipiert wurde.";
 
   const address = locationData?.address || fallbackDetails.address;

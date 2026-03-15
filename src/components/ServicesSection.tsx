@@ -2,6 +2,12 @@ import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Activity, Hand, Bone, Brain, Zap, ChevronDown, LucideIcon, Sparkles } from "lucide-react";
 
+import serviceMassage from "@/assets/service_massage.png";
+import serviceBms from "@/assets/service_bms.png";
+import serviceFrequency from "@/assets/service_frequency.png";
+import serviceBioplasmatic from "@/assets/service_bioplasmatic.png";
+import serviceConsultation from "@/assets/service_consultation.png";
+
 const iconMap: Record<string, LucideIcon> = {
   Activity,
   Hand,
@@ -12,6 +18,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 interface Service {
   iconName: string;
+  image: string;
   title: string;
   price: string;
   description: string;
@@ -26,38 +33,41 @@ interface Service {
 const services: Service[] = [
   {
     iconName: "Hand",
-    title: "Individuelle Massagen",
-    price: "120",
-    accent: "from-rose-50 to-pink-50/60",
-    iconBg: "bg-rose-100",
-    iconColor: "text-rose-600",
-    border: "border-rose-100 hover:border-rose-300",
+    image: serviceMassage,
+    title: "Therapeutische Massage",
+    price: "Ab 120",
+    accent: "from-white to-slate-50/60",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-800",
+    border: "border-slate-200 hover:border-slate-300",
     description: "Personalisierte Massagetherapie, die auf Ihre muskulären Bedürfnisse und Entspannungsziele zugeschnitten ist.",
     detail:
-      "Wählen Sie aus unserem Trio fachmännisch entwickelter Massagemodaliäten. Die klassische Massage nutzt lange, fließende Bewegungen, um Verspannungen zu lösen und tiefe Entspannung zu fördern. Die Sportmassage zielt auf die sportliche Erholung ab, spült Stoffwechselabfälle aus und verbessert die Beweglichkeit. Schröpfen wendet Unterdruck auf das Weichteilgewebe an, löst Verklebungen und stimuliert die Durchblutung in tieferen Schichten. Jede Sitzung wird tagesaktuell an Ihren Körper angepasst.",
+      "Wählen Sie aus meinem Trio fachmännisch entwickelter Massagemodaliäten. Die klassische Massage nutzt lange, fließende Bewegungen, um Verspannungen zu lösen und tiefe Entspannung zu fördern. Die Sportmassage zielt auf die sportliche Erholung ab, spült Stoffwechselabfälle aus und verbessert die Beweglichkeit. Schröpfen wendet Unterdruck auf das Weichteilgewebe an, löst Verklebungen und stimuliert die Durchblutung in tieferen Schichten. Jede Sitzung wird tagesaktuell an Ihren Körper angepasst.",
     highlights: ["Klassische Massage", "Sportmassage", "Schröpfen"],
   },
   {
     iconName: "Activity",
+    image: serviceBms,
     title: "Biomechanische Stimulation (BMS)",
     price: "155",
-    accent: "from-sky-50 to-blue-50/60",
-    iconBg: "bg-sky-100",
-    iconColor: "text-sky-600",
-    border: "border-sky-100 hover:border-sky-300",
+    accent: "from-white to-slate-50/60",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-800",
+    border: "border-slate-200 hover:border-slate-300",
     description: "Fortschrittliche mechanische Vibrationstherapie zur Verbesserung der Muskelfunktion und Erholung.",
     detail:
-      "BMS nutzt präzise kalibrierte mechanische Vibrationen, die direkt auf das Muskel- und Bindegewebe einwirken. Die Oszillationen lösen unwillkürliche Muskelkontraktionen aus, beschleunigen den Lymphfluss, verbessern die Propriozeption und steigern die Mikrozirkulation. Klienten erleben typischerweise weniger Muskelkater, eine schnellere Erholung nach Verletzungen und messbare Kraftzuwächse. Jose Barassas einzigartiges BMS-Protokoll kombiniert Frequenzsequenzierung mit gezielter Haltungskorrektur für nachhaltige Ergebnisse.",
+      "BMS nutzt präzise kalibrierte mechanische Vibrationen, die direkt auf das Muskel- und Bindegewebe einwirken. Die Oszillationen lösen unwillkürliche Muskelkontraktionen aus, beschleunigen den Lymphfluss, verbessern die Propriozeption und steigern die Mikrozirkulation. Klienten erleben typischerweise weniger Muskelkater, eine schnellere Erholung nach Verletzungen und messbare Kraftzuwächse. Mein einzigartiges BMS-Protokoll kombiniert Frequenzsequenzierung mit gezielter Haltungskorrektur für nachhaltige Ergebnisse.",
     highlights: ["Gezielte Vibrationstherapie", "Unterstützung des Lymphabflusses", "Beschleunigte Muskelerholung"],
   },
   {
     iconName: "Zap",
+    image: serviceFrequency,
     title: "Frequenztherapie",
     price: "145",
-    accent: "from-amber-50 to-yellow-50/60",
-    iconBg: "bg-amber-100",
-    iconColor: "text-amber-600",
-    border: "border-amber-100 hover:border-amber-300",
+    accent: "from-white to-slate-50/60",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-800",
+    border: "border-slate-200 hover:border-slate-300",
     description: "Innovative frequenzbasierte Behandlungen zur Förderung der Zellheilung und des Energiegleichgewichts.",
     detail:
       "Mit dem Biophotonlight-Gerät werden spezifische Lichtfrequenzen auf zellulärer Ebene an das Gewebe abgegeben. Die Photobiomodulation stimuliert die Mitochondrienaktivität, beschleunigt die ATP-Produktion, reduziert Entzündungsmarker und fördert die Kollagensynthese. Das Ergebnis ist eine schnellere Wundheilung, linderung chronischer Schmerzen und eine wiederhergestellte Vitalität. Die Behandlungspläne werden nach einer gründlichen energetischen Einschätzung personalisiert.",
@@ -65,28 +75,30 @@ const services: Service[] = [
   },
   {
     iconName: "Brain",
+    image: serviceBioplasmatic,
     title: "Bioplasmatik",
     price: "170",
-    accent: "from-violet-50 to-purple-50/60",
-    iconBg: "bg-violet-100",
-    iconColor: "text-violet-600",
-    border: "border-violet-100 hover:border-violet-300",
-    description: "Ein spezialisierter Ansatz zum Ausgleich des Energiefeldes und zum systemischen Wohlbefinden.",
+    accent: "from-white to-slate-50/60",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-800",
+    border: "border-slate-200 hover:border-slate-300",
+    description: "Ein spezialisierter Ansatz zum Ausgleich des Energiefeldes und zum systemischen Wohlbefindens.",
     detail:
-      "Die bioplasmatische Therapie arbeitet mit dem bioelektrischen und energetischen Feld des Körpers – der subtilen Informationsebene, die physiologische Prozesse steuert. Durch präzise, nicht-invasive Techniken liest und harmonisiert Jose Störungen in diesem Feld, die mit chronischen Schmerzen, Müdigkeit, Immunstörungen und emotionalem Stress korrelieren. Die Sitzungen führen oft zu tiefgreifenden Veränderungen des Wohlbefindens, der Klarheit und der körperlichen Funktion, die herkömmliche Behandlungen allein nicht erreichen können.",
+      "Die bioplasmatische Therapie arbeitet mit dem bioelektrischen und energetischen Feld des Körpers – der subtilen Informationsebene, die physiologische Prozesse steuert. Durch präzise, nicht-invasive Techniken lese und harmonisiere ich Störungen in diesem Feld, die mit chronischen Schmerzen, Müdigkeit, Immunstörungen und emotionalem Stress korrelieren. Die Sitzungen führen oft zu tiefgreifenden Veränderungen des Wohlbefindens, der Klarheit und der körperlichen Funktion, die herkömmliche Behandlungen allein nicht erreichen können.",
     highlights: ["Bioelektrischer Energiefeldausgleich", "Systemischer Wellness-Reset", "Linderung von chronischer Müdigkeit & Schmerzen"],
   },
   {
     iconName: "Bone",
+    image: serviceConsultation,
     title: "Gesundheitsberatung",
     price: "110",
-    accent: "from-emerald-50 to-teal-50/60",
-    iconBg: "bg-emerald-100",
-    iconColor: "text-emerald-600",
-    border: "border-emerald-100 hover:border-emerald-300",
+    accent: "from-white to-slate-50/60",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-800",
+    border: "border-slate-200 hover:border-slate-300",
     description: "Professionelle Beratung zu Lebensstil, Ernährung und nachhaltigen Gesundheitspraktiken.",
     detail:
-      "Eine gründliche 1-zu-1-Beratung, die Ihre aktuelle Gesundheitslandschaft abbildet – von Ernährungslücken und Schlafqualität bis hin zu Bewegungsmustern und Stressbelastung. Jose wertet diese Daten aus, um einen personalisierten Fahrplan zu erstellen, der Ernährungsstrategie, Supplementierung, Erholungsprotokolle und Lebensstilanpassungen abdeckt. Follow-up-Sitzungen verfolgen den Fortschritt und passen den Plan an die Reaktion Ihres Körpers an, um eine nachhaltige, langfristige Transformation zu gewährleisten.",
+      "Eine gründliche 1-zu-1-Beratung, die Ihre aktuelle Gesundheitslandschaft abbildet – von Ernährungslücken und Schlafqualität bis hin zu Bewegungsmustern und Stressbelastung. Ich werte diese Daten aus, um einen personalisierten Fahrplan zu erstellen, der Ernährungsstrategie, Supplementierung, Erholungsprotokolle und Lebensstilanpassungen abdeckt. Follow-up-Sitzungen verfolgen den Fortschritt und passen den Plan an die Reaktion Ihres Körpers an, um eine nachhaltige, langfristige Transformation zu gewährleisten.",
     highlights: ["Personalisierter Gesundheitsfahrplan", "Ernährungs- & Nahrungsergänzungsstrategie", "Lebensstil- & Erholungsprotokolle"],
   },
 ];
@@ -117,10 +129,10 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-rose-50 via-pink-50/60 to-white">
+    <section id="services" className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-white via-slate-50/40 to-white">
       {/* Ambient blobs */}
-      <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-[640px] h-[640px] rounded-full bg-gradient-to-br from-rose-200/40 to-pink-100/20 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[560px] h-[560px] rounded-full bg-gradient-to-tr from-pink-100/50 to-rose-50/30 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-[640px] h-[640px] rounded-full bg-gradient-to-br from-slate-200/40 to-slate-100/20 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[560px] h-[560px] rounded-full bg-gradient-to-tr from-slate-100/50 to-slate-50/30 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Header */}
@@ -133,7 +145,7 @@ const ServicesSection = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/8 border border-primary/10 text-primary text-[11px] font-bold tracking-[0.18em] uppercase mb-5 shadow-sm">
             <Sparkles className="w-3 h-3" />
-            Unsere Expertise
+            Meine Expertise
           </div>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-5 leading-[1.1]">
             Dienstleistungen
@@ -149,7 +161,7 @@ const ServicesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"
+          className="flex flex-wrap justify-center gap-7 w-full"
         >
           {services.map((s, idx) => {
             const Icon = iconMap[s.iconName] || Activity;
@@ -159,8 +171,14 @@ const ServicesSection = () => {
               <motion.article
                 variants={cardVariants}
                 key={s.title}
-                className={`group relative rounded-3xl border bg-gradient-to-br ${s.accent} ${s.border} shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1.5 overflow-hidden flex flex-col`}
+                className={`w-full sm:w-[calc(50%-14px)] lg:w-[calc(33.333%-19px)] group relative rounded-3xl border bg-gradient-to-br ${s.accent} border-border shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1.5 overflow-hidden flex flex-col`}
               >
+                {/* Image Header */}
+                <div className="relative h-48 w-full overflow-hidden shrink-0 border-b border-border">
+                  <img src={s.image} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-black/10 transition-opacity duration-300 group-hover:bg-transparent" />
+                </div>
+
                 {/* Subtle sheen overlay on hover */}
                 <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-white/20" />
 
@@ -178,7 +196,7 @@ const ServicesSection = () => {
                         Sitzung ab
                       </span>
                       <div className="text-2xl font-black text-foreground leading-none">
-                        <span className={`text-sm font-bold ${s.iconColor} mr-0.5`}>$</span>
+                        <span className={`text-sm font-bold ${s.iconColor} mr-1`}>CHF</span>
                         {s.price}
                       </div>
                     </div>
@@ -201,7 +219,7 @@ const ServicesSection = () => {
                   <button
                     onClick={() => toggle(idx)}
                     aria-expanded={isOpen}
-                    className={`flex items-center justify-between w-full text-sm font-semibold ${s.iconColor} hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-current rounded-lg`}
+                    className={`flex items-center justify-between w-full text-sm font-semibold ${s.iconColor} hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-current rounded-lg ${isOpen ? 'mb-2' : ''}`}
                   >
                     <span>{isOpen ? "Weniger anzeigen" : "Mehr erfahren"}</span>
                     <motion.span
@@ -224,17 +242,17 @@ const ServicesSection = () => {
                         transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-5">
-                          <p className="text-[14px] text-foreground/70 leading-relaxed mb-4">
+                        <div className="pt-2">
+                          <p className="text-[14px] text-foreground/70 leading-relaxed mb-5">
                             {s.detail}
                           </p>
 
                           {/* Highlight pills */}
-                          <ul className="flex flex-col gap-2">
+                          <ul className="flex flex-col gap-3">
                             {s.highlights.map((h, i) => (
-                              <li key={i} className="flex items-center gap-2.5">
-                                <span className={`inline-flex w-1.5 h-1.5 rounded-full flex-shrink-0 ${s.iconBg} ring-2 ring-offset-1 ring-current ${s.iconColor}`} />
-                                <span className="text-[13px] font-medium text-foreground/75">{h}</span>
+                              <li key={i} className="flex items-start gap-3">
+                                <span className={`mt-1.5 inline-flex w-1.5 h-1.5 rounded-full flex-shrink-0 bg-primary`} />
+                                <span className="text-[13px] font-medium text-foreground/75 leading-snug">{h}</span>
                               </li>
                             ))}
                           </ul>
@@ -261,10 +279,20 @@ const ServicesSection = () => {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-foreground text-background text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary mb-12"
           >
             Kostenlosen Beratungstermin buchen
           </a>
+
+          {/* Payment Info */}
+          <div className="mx-auto max-w-2xl bg-white/60 backdrop-blur-sm border border-black/5 rounded-2xl p-6 md:p-8 shadow-sm text-center">
+            <p className="text-sm md:text-[15px] text-foreground/80 leading-relaxed mb-4">
+              Um mich voll und ganz auf Ihre persönliche und qualitativ hochwertige Behandlung konzentrieren zu können, arbeite ich unabhängig und bin <span className="font-semibold text-foreground">nicht krankenkassenanerkannt</span>.
+            </p>
+            <p className="text-sm md:text-[15px] text-foreground/80 leading-relaxed">
+              Ihre Investition in Ihre Gesundheit können Sie im Anschluss ganz bequem abstimmen – ich akzeptiere Zahlungen via <span className="font-semibold text-primary">Twint, Bar oder auf Rechnung</span>.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

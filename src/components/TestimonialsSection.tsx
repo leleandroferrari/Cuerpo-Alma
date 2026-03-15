@@ -3,35 +3,31 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Marcus Aurelius",
+    name: "Marcus",
     role: "Profisportler",
-    image: "/avatars/marcus.png",
     quote:
-      "Die Sportmassage- und BMS-Sitzungen in Joses Klinik waren ausschlaggebend für meine Erholung. Ich fühle mich explosiver und meine Muskelspannungen sind praktisch verschwunden.",
+      "Die Sportmassage- und BMS-Sitzungen in der Klinik waren ausschlaggebend für meine Erholung. Ich fühle mich explosiver und meine Muskelspannungen sind praktisch verschwunden.",
     rating: 5,
   },
   {
-    name: "Elena Fischer",
+    name: "Elena",
     role: "Wellness-Befürworterin",
-    image: "/avatars/elena.png",
     quote:
       "Frequenztherapie mit Biophotonlight klang futuristisch, aber die Ergebnisse waren fast unmittelbar zu spüren. Meine Schlafqualität und mein Energieniveau waren noch nie besser.",
     rating: 5,
   },
   {
-    name: "Thomas Mueller",
+    name: "Thomas",
     role: "Patient mit chronischen Schmerzen",
-    image: "/avatars/thomas.png",
     quote:
       "Nach Jahren mit Rückenproblemen hat die Kombination aus Schröpfen und bioplasmatischer Behandlung endlich die Linderung verschafft, die ich brauchte. Wahrlich eine ganzheitliche Heilerfahrung.",
     rating: 5,
   },
   {
-    name: "Sophia Chen",
+    name: "Sophia",
     role: "Unternehmensführung",
-    image: "/avatars/sophia.png",
     quote:
-      "Die Gesundheitsberatung bei Jose hat mir geholfen, meinen Lebensstil für nachhaltige Vitalität neu zu strukturieren. Der personalisierte Ansatz ist mit nichts zu vergleichen, was ich bisher ausprobiert habe.",
+      "Die Gesundheitsberatung hat mir geholfen, meinen Lebensstil für nachhaltige Vitalität neu zu strukturieren. Der personalisierte Ansatz ist mit nichts zu vergleichen, was ich bisher ausprobiert habe.",
     rating: 5,
   },
 ];
@@ -108,12 +104,8 @@ const TestimonialsSection = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                <div className="h-14 w-14 rounded-2xl overflow-hidden border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
-                  <img
-                    src={t.image}
-                    alt={t.name}
-                    className="h-full w-full object-cover"
-                  />
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20">
+                  {t.name.charAt(0)}
                 </div>
                 <div>
                   <p className="font-bold text-foreground text-lg">{t.name}</p>

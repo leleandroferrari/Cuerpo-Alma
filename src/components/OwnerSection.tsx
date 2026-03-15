@@ -15,18 +15,18 @@ const OwnerSection = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
                             <User className="w-3 h-3" />
-                            Lernen Sie Jose Barassa kennen
+                            Lernen Sie mich kennen
                         </div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
                             Das Herz hinter der <br />
-                            <span className="text-primary italic">Vitality Clinic.</span>
+                            <span className="text-primary italic">Cuerpo-alma.</span>
                         </h2>
                         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                             <p>
-                                Jose Barassa ist der Gründer und leitende Therapeut der Vitality Clinic und verfügt über mehr als zwei Jahrzehnte klinische Erfahrung im Bereich menschlicher Leistung und Erholung. Seine Reise begann mit der einfachen Überzeugung: dass jeder Einzelne eine angeborene Fähigkeit zur Heilung besitzt, wenn ihm die richtigen Werkzeuge und Anleitungen gegeben werden.
+                                Ich bin der Gründer und leitende Therapeut von Cuerpo-alma und verfüge über mehr als zwei Jahrzehnte klinische Erfahrung im Bereich menschlicher Leistung und Erholung. Meine Reise begann mit der einfachen Überzeugung: dass jeder Einzelne eine angeborene Fähigkeit zur Heilung besitzt, wenn ihm die richtigen Werkzeuge und Anleitungen gegeben werden.
                             </p>
                             <p>
-                                Inspiriert durch seine eigene Erfahrung mit körperlicher Rehabilitation, widmete Jose sein Leben der Beherrschung von Biomechanik und energetischer Therapie. Heute kombiniert er traditionelles klinisches Wissen mit modernsten Technologien wie BMS und Frequenztherapie, um seinen Klienten zu Ergebnissen zu verhelfen, die sie nie für möglich gehalten hätten.
+                                Inspiriert durch meine eigene Erfahrung mit körperlicher Rehabilitation, widmete ich mein Leben der Beherrschung von Biomechanik und energetischer Therapie. Heute kombiniere ich traditionelles klinisches Wissen mit modernsten Technologien wie BMS und Frequenztherapie, um meinen Klienten zu Ergebnissen zu verhelfen, die sie nie für möglich gehalten hätten.
                             </p>
                             <p>
                                 "Letztendlich ist es mein Ziel, dass Sie sich besser bewegen, sich stärker fühlen und mit mehr Vitalität leben als gestern. Ihr Weg zum Wohlbefinden ist persönlich, und ich fühle mich geehrt, ein Teil davon zu sein."

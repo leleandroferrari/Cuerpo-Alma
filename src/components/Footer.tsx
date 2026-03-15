@@ -14,11 +14,11 @@ const Footer = () => (
         <div className="bg-primary/10 p-2 rounded-xl">
           <Leaf className="h-6 w-6 text-primary" />
         </div>
-        Elite-Physio.
+        Cuerpo-alma.
       </div>
 
       <p className="text-sm text-muted-foreground py-2 font-medium">
-        © {new Date().getFullYear()} Elite Physiotherapy. Alle Rechte vorbehalten. ·{" "}
+        © {new Date().getFullYear()} Cuerpo-alma. Alle Rechte vorbehalten. ·{" "}
         <a href="#" className="underline decoration-border underline-offset-4 hover:decoration-primary transition-colors">Datenschutzbestimmungen</a>
       </p>
     </motion.div>

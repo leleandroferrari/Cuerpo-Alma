@@ -5,7 +5,7 @@ const aboutFeatures = [
   {
     icon: Heart,
     title: "Patientenzentrierte Pflege",
-    description: "Ihre Gesundheit und Ihr Wohlbefinden stehen im Mittelpunkt unseres Handelns. Wir erstellen personalisierte Behandlungspläne, die auf Ihre individuellen Bedürfnisse zugeschnitten sind."
+    description: "Ihre Gesundheit und Ihr Wohlbefinden stehen im Mittelpunkt meines Handelns. Ich erstelle personalisierte Behandlungspläne, die auf Ihre individuellen Bedürfnisse zugeschnitten sind."
   },
   {
     icon: Award,
@@ -15,12 +15,12 @@ const aboutFeatures = [
   {
     icon: Users,
     title: "Ganzheitlicher Ansatz",
-    description: "Wir glauben daran, den Menschen zu behandeln, nicht nur die Symptome, und integrieren körperliches, systemisches und energetisches Wohlbefinden."
+    description: "Ich glaube daran, den Menschen zu behandeln, nicht nur die Symptome, und integriere körperliches, systemisches und energetisches Wohlbefinden."
   },
   {
     icon: Target,
     title: "Ergebnisorientiert",
-    description: "Unser Fokus liegt auf messbaren Verbesserungen, damit Sie mit Zuversicht zu Ihrer Höchstleistung und Ihrem täglichen Leben zurückkehren können."
+    description: "Mein Fokus liegt auf messbaren Verbesserungen, damit Sie mit Zuversicht zu Ihrer Höchstleistung und Ihrem täglichen Leben zurückkehren können."
   }
 ];
 
@@ -38,7 +38,7 @@ const AboutSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
               <Sparkles className="w-3 h-3" />
-              Unsere Philosophie
+              Meine Philosophie
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
               Erleben Sie die Zukunft von <br />
@@ -46,10 +46,10 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                In <span className="text-foreground font-semibold">Jose Barassas Vitality Clinic</span> schlagen wir die Brücke zwischen traditioneller therapeutischer Exzellenz und modernsten Wellness-Technologien.
+                In <span className="text-foreground font-semibold">meiner Praxis Cuerpo-alma</span> schlage ich die Brücke zwischen traditioneller therapeutischer Exzellenz und modernsten Wellness-Technologien.
               </p>
               <p>
-                Unsere Mission ist es, Menschen durch einen mehrdimensionalen Gesundheitsansatz zu stärken. Durch die Integration von biomechanischer Stimulation, Frequenztherapie und personalisierter Beratung setzen wir das körpereigene Potenzial für Erholung und Leistung frei.
+                Meine Mission ist es, Menschen durch einen mehrdimensionalen Gesundheitsansatz zu stärken. Durch die Integration von biomechanischer Stimulation, Frequenztherapie und personalisierter Beratung setze ich das körpereigene Potenzial für Erholung und Leistung frei.
               </p>
             </div>
           </motion.div>

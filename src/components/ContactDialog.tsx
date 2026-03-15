@@ -21,13 +21,13 @@ const ContactDialog = ({ open, onOpenChange }: ContactDialogProps) => {
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-2 text-2xl">
             <Phone className="h-6 w-6 text-primary" />
-            Kontaktieren Sie uns
+            Kontaktieren Sie mich
           </AlertDialogTitle>
           <AlertDialogDescription className="text-base pt-4">
-            Rufen Sie uns an, um Ihren Termin zu vereinbaren oder Fragen zu stellen:
+            Rufen Sie mich an, um Ihren Termin zu vereinbaren oder Fragen zu stellen:
             <div className="mt-4 p-4 bg-section-alt rounded-lg border border-border">
-              <a 
-                href="tel:123-456-7890" 
+              <a
+                href="tel:123-456-7890"
                 className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
               >
                 123-456-7890
