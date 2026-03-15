@@ -57,7 +57,7 @@ const HeroSection = () => {
             {badgeText}
           </motion.div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl whitespace-pre-line sm:whitespace-normal break-words hyphens-auto leading-[1.1] sm:leading-[1.05] mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl whitespace-pre-line sm:whitespace-normal leading-[1.1] sm:leading-[1.05] mb-6">
             {title}
           </h1>
 
