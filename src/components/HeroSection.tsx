@@ -30,7 +30,7 @@ const HeroSection = () => {
   });
 
   const badgeText = heroData?.badgeText || "Innovative persönliche Wellness";
-  const title = heroData?.title || "Ich helfe Ihnen,\nIhre Vitalität\nzurückzugewinnen.";
+  const title = heroData?.title || "Moderne Therapie für\nspürbar mehr\nLebensqualität.";
   const subtitle = heroData?.subtitle || "Personalisierte Therapie für Ihre einzigartigen Bedürfnisse. Ich kombiniere fortschrittliche biomechanische Stimulation mit spezialisierter Frequenztherapie, um Ihr Körpergleichgewicht wiederherzustellen.";
   // We prioritize the placeholder for the new design as requested, fallback to Sanity later if updated
   const imageUrl = heroData?.image ? urlFor(heroData.image).url() : josePlaceholder;
