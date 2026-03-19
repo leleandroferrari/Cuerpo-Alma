@@ -6,56 +6,39 @@
 
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    /* Light beige background */
-    --foreground: 120 20% 20%;
-    /* Dark green/charcoal text */
+    --background: 0 0% 100%;
+    --foreground: 202 75% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 120 20% 20%;
+    --card-foreground: 202 75% 17%;
 
-    --popover: 40 33% 96%;
-    --popover-foreground: 120 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 202 75% 17%;
 
-    --primary: 110 30% 30%;
-    /* Deep green for buttons and accents */
+    --primary: 202 75% 17%;
     --primary-foreground: 0 0% 100%;
-    /* White text on primary */
 
-    --secondary: 40 20% 92%;
-    /* Slightly darker beige for secondary elements */
-    --secondary-foreground: 120 20% 20%;
+    --secondary: 40 60% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 15% 90%;
-    --muted-foreground: 120 10% 40%;
+    --muted: 202 30% 96%;
+    --muted-foreground: 202 40% 40%;
 
-    --accent: 110 20% 90%;
-    /* Very light green for subtle accents */
-    --accent-foreground: 120 20% 20%;
+    --accent: 40 60% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 15% 85%;
-    --input: 40 15% 85%;
-    --ring: 110 30% 30%;
+    --border: 202 20% 90%;
+    --input: 202 20% 90%;
+    --ring: 202 75% 17%;
 
-    --radius: 0.5rem;
-    /* Slightly sharper corners */
-
-    --section-alt: 40 20% 92%;
-    /* Section alt background */
-    --hero-overlay: 120 20% 20%;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 240 5.9% 10%;
+    --section-alt: 202 30% 97%;
+    --hero-overlay: 202 75% 10%;
   }
+
+  /* The dark mode can stay as an optional alternative if implemented later, but keeping default variables aligned with the business card */
 
   .dark {
     --background: 240 10% 4%;
@@ -88,39 +71,6 @@
 
     --section-alt: 240 5% 6%;
     --hero-overlay: 240 10% 2%;
-  }
-
-  .theme-gold-blue {
-    --background: 0 0% 100%;
-    --foreground: 202 75% 17%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 202 75% 17%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 202 75% 17%;
-
-    --primary: 202 75% 17%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 43 74% 49%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 202 30% 96%;
-    --muted-foreground: 202 40% 40%;
-
-    --accent: 43 74% 49%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 202 20% 90%;
-    --input: 202 20% 90%;
-    --ring: 202 75% 17%;
-
-    --section-alt: 202 30% 97%;
-    --hero-overlay: 202 75% 10%;
   }
 }
 
