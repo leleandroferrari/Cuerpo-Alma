@@ -7,7 +7,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Phone } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
 interface ContactDialogProps {
   open: boolean;
@@ -24,14 +24,26 @@ const ContactDialog = ({ open, onOpenChange }: ContactDialogProps) => {
             Kontaktieren Sie mich
           </AlertDialogTitle>
           <AlertDialogDescription className="text-base pt-4">
-            Rufen Sie mich an, um Ihren Termin zu vereinbaren oder Fragen zu stellen:
-            <div className="mt-4 p-4 bg-section-alt rounded-lg border border-border">
-              <a
-                href="tel:123-456-7890"
-                className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
-              >
-                123-456-7890
-              </a>
+            Kontaktieren Sie mich, um Ihren Termin zu vereinbaren oder Fragen zu stellen:
+            <div className="flex flex-col gap-3 mt-4">
+              <div className="p-4 bg-section-alt rounded-lg border border-border flex items-center justify-center gap-3">
+                <Phone className="h-5 w-5 text-muted-foreground" />
+                <a
+                  href="tel:0794830806"
+                  className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+                >
+                  079 483 08 06
+                </a>
+              </div>
+              <div className="p-4 bg-section-alt rounded-lg border border-border flex items-center justify-center gap-3">
+                <Mail className="h-5 w-5 text-muted-foreground" />
+                <a
+                  href="mailto:kontakt@cuerpo-alma.ch"
+                  className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+                >
+                  kontakt@cuerpo-alma.ch
+                </a>
+              </div>
             </div>
           </AlertDialogDescription>
         </AlertDialogHeader>

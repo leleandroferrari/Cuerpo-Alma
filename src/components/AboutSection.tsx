@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Heart, Award, Users, Target, Sparkles } from "lucide-react";
+import { Heart, Award, Users, Target, Sparkles, Star } from "lucide-react";
+import joseProfile from "@/assets/jose_profile.png";
 
 const aboutFeatures = [
   {
@@ -38,18 +39,19 @@ const AboutSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
               <Sparkles className="w-3 h-3" />
-              Meine Philosophie
+              Über mich
             </div>
+
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
-              Erleben Sie die Zukunft von <br />
-              <span className="text-primary italic">Vitalität & Heilung.</span>
+              Jeder Mensch ist <br />
+              <span className="text-primary italic">einzigartig.</span>
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                In <span className="text-foreground font-semibold">meiner Praxis Cuerpo-alma</span> schlage ich die Brücke zwischen traditioneller therapeutischer Exzellenz und modernsten Wellness-Technologien.
+                Als ehemaliger Fussballspieler weiss ich aus erster Hand, wie wichtig Gesundheit ist – nicht nur körperlich, sondern auch mental. Ich bin <span className="text-foreground font-semibold">Jose Barassa</span>, klassischer Masseur und Therapeut seit 2014.
               </p>
               <p>
-                Meine Mission ist es, Menschen durch einen mehrdimensionalen Gesundheitsansatz zu stärken. Durch die Integration von biomechanischer Stimulation, Frequenztherapie und personalisierter Beratung setze ich das körpereigene Potenzial für Erholung und Leistung frei.
+                Es bereitet mir grosse Freude, Menschen zu helfen und zu sehen, dass es ihnen nach einer Behandlung besser geht und sie mit einem Lächeln auf den Lippen meine Praxis <span className="text-foreground font-semibold">Cuerpo & Alma</span> verlassen. Mit meinen Händen viel Gutes zu bewegen, ist für mich mehr als ein Beruf – es ist meine Lebensaufgabe.
               </p>
             </div>
           </motion.div>

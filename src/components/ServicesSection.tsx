@@ -34,7 +34,7 @@ const services: Service[] = [
   {
     iconName: "Hand",
     image: serviceMassage,
-    title: "Therapeutische Massage",
+    title: "Individuelle Massagen",
     price: "Ab 120",
     accent: "from-white to-slate-50/60",
     iconBg: "bg-slate-100",
@@ -42,7 +42,7 @@ const services: Service[] = [
     border: "border-slate-200 hover:border-slate-300",
     description: "Personalisierte Massagetherapie, die auf Ihre muskulären Bedürfnisse und Entspannungsziele zugeschnitten ist.",
     detail:
-      "Wählen Sie aus meinem Trio fachmännisch entwickelter Massagemodaliäten. Die klassische Massage nutzt lange, fließende Bewegungen, um Verspannungen zu lösen und tiefe Entspannung zu fördern. Die Sportmassage zielt auf die sportliche Erholung ab, spült Stoffwechselabfälle aus und verbessert die Beweglichkeit. Schröpfen wendet Unterdruck auf das Weichteilgewebe an, löst Verklebungen und stimuliert die Durchblutung in tieferen Schichten. Jede Sitzung wird tagesaktuell an Ihren Körper angepasst.",
+      "Wählen Sie aus meinen fachmännisch angewandten Massagemethoden. Die klassische Massage nutzt fließende Bewegungen, um Verspannungen zu lösen und tiefe Entspannung zu fördern. Schröpfen wendet Unterdruck auf das Weichteilgewebe an, löst Verklebungen und stimuliert die Durchblutung in tieferen Schichten. Jede Sitzung wird an Ihren individuellen Körper angepasst.",
     highlights: ["Klassische Massage", "Sportmassage", "Schröpfen"],
   },
   {
@@ -62,16 +62,16 @@ const services: Service[] = [
   {
     iconName: "Zap",
     image: serviceFrequency,
-    title: "Frequenztherapie",
+    title: "Energetik",
     price: "145",
     accent: "from-white to-slate-50/60",
     iconBg: "bg-slate-100",
     iconColor: "text-slate-800",
     border: "border-slate-200 hover:border-slate-300",
-    description: "Innovative frequenzbasierte Behandlungen zur Förderung der Zellheilung und des Energiegleichgewichts.",
+    description: "Tiefgreifende energetische Blockaden lösen und den Energiefluss im Körper harmonisieren.",
     detail:
-      "Mit dem Biophotonlight-Gerät werden spezifische Lichtfrequenzen auf zellulärer Ebene an das Gewebe abgegeben. Die Photobiomodulation stimuliert die Mitochondrienaktivität, beschleunigt die ATP-Produktion, reduziert Entzündungsmarker und fördert die Kollagensynthese. Das Ergebnis ist eine schnellere Wundheilung, linderung chronischer Schmerzen und eine wiederhergestellte Vitalität. Die Behandlungspläne werden nach einer gründlichen energetischen Einschätzung personalisiert.",
-    highlights: ["Biophotonlight-Behandlung", "Mitochondriale Stimulation", "Reduzierung von Entzündungen"],
+      "Mit verschiedenen Techniken der Energetikarbeit unterstütze ich Sie dabei, Blockaden auf feinstofflicher Ebene aufzulösen. Emotionale und energetische Ungleichgewichte, die sich oft als körperliche Beschwerden oder Erschöpfung manifestieren, werden gezielt harmonisiert, um die Selbstheilungskräfte zu aktivieren und ein tiefes Gefühl der Ausgeglichenheit zu schaffen.",
+    highlights: ["Auflösen von Blockaden", "Harmonisierung des Energieflusses", "Aktivierung der Selbstheilungskräfte"],
   },
   {
     iconName: "Brain",

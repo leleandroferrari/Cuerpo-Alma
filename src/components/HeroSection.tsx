@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import josePlaceholder from "@/assets/jose_placeholder.png";
+import joseProfile from "@/assets/jose_profile.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { sanityClient, urlFor } from "@/lib/sanity";
@@ -29,11 +29,11 @@ const HeroSection = () => {
     },
   });
 
-  const badgeText = heroData?.badgeText || "Innovative persönliche Wellness";
-  const title = heroData?.title || "Moderne Therapie für\nspürbar mehr\nLebensqualität.";
-  const subtitle = heroData?.subtitle || "Personalisierte Therapie für Ihre einzigartigen Bedürfnisse. Ich kombiniere fortschrittliche biomechanische Stimulation mit spezialisierter Frequenztherapie, um Ihr Körpergleichgewicht wiederherzustellen.";
+  const badgeText = heroData?.badgeText || "Körper und Seele im Einklang";
+  const title = heroData?.title || "In Selbstheilung kommen\nund sich\nwohlfühlen.";
+  const subtitle = heroData?.subtitle || "Personalisierte Behandlungen für Ihre einzigartigen Bedürfnisse. Für alle Menschen, die Entspannung, ganzheitliche Heilung und tiefes Wohlbefinden suchen.";
   // We prioritize the placeholder for the new design as requested, fallback to Sanity later if updated
-  const imageUrl = heroData?.image ? urlFor(heroData.image).url() : josePlaceholder;
+  const imageUrl = heroData?.image ? urlFor(heroData.image).url() : joseProfile;
 
   return (
     <section id="book" className="relative overflow-hidden min-h-screen flex items-center bg-background">

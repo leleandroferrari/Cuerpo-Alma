@@ -15,8 +15,8 @@ interface LocationData {
 }
 
 const fallbackDetails = {
-  address: "Premium Wellness Plaza, Suite 402\nCity Health District",
-  phone: "+41 (0) 123 456 789",
+  address: "Gewerbestrasse 4\n9524 Zuzwil",
+  phone: "079 483 08 06",
   email: "kontakt@cuerpo-alma.ch",
 };
 
@@ -43,7 +43,7 @@ const LocationSection = () => {
   const phone = locationData?.phone || fallbackDetails.phone;
   const email = locationData?.email || fallbackDetails.email;
   const hours = locationData?.hours?.length ? locationData.hours : fallbackHours;
-  const mapEmbedUrl = locationData?.mapEmbedUrl || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115165.4678225585!2d8.448057283407983!3d47.37743360667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9749bea219%3A0xe63ee62d11013f37!2sZurich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1710000000000!5m2!1sen!2sch";
+  const mapEmbedUrl = locationData?.mapEmbedUrl || "https://maps.google.com/maps?q=Gewerbestrasse%204,%209524%20Zuzwil&t=&z=13&ie=UTF8&iwloc=&output=embed";
 
   const detailsList = [
     { icon: MapPin, label: "Adresse", value: address },

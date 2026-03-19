@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { User, Quote } from "lucide-react";
+import joseProfile from "@/assets/jose_profile.png";
 
 const OwnerSection = () => {
     return (
@@ -18,24 +19,21 @@ const OwnerSection = () => {
                             Lernen Sie mich kennen
                         </div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
-                            Das Herz hinter der <br />
-                            <span className="text-primary italic">Cuerpo-alma.</span>
+                            Das Herz hinter <br />
+                            <span className="text-primary italic">Cuerpo & Alma.</span>
                         </h2>
                         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                             <p>
-                                Ich bin der Gründer und leitende Therapeut von Cuerpo-alma und verfüge über mehr als zwei Jahrzehnte klinische Erfahrung im Bereich menschlicher Leistung und Erholung. Meine Reise begann mit der einfachen Überzeugung: dass jeder Einzelne eine angeborene Fähigkeit zur Heilung besitzt, wenn ihm die richtigen Werkzeuge und Anleitungen gegeben werden.
+                                Als ehemaliger Fussballspieler war mir Gesundheit immer sehr wichtig – nicht nur körperlich, sondern auch mental. Meine Reise begann mit dem Wunsch, Menschen zu helfen und zu sehen, wie sie nach einer Behandlung mit einem Lächeln auf den Lippen meine Praxis verlassen.
                             </p>
                             <p>
-                                Inspiriert durch meine eigene Erfahrung mit körperlicher Rehabilitation, widmete ich mein Leben der Beherrschung von Biomechanik und energetischer Therapie. Heute kombiniere ich traditionelles klinisches Wissen mit modernsten Technologien wie BMS und Frequenztherapie, um meinen Klienten zu Ergebnissen zu verhelfen, die sie nie für möglich gehalten hätten.
-                            </p>
-                            <p>
-                                "Letztendlich ist es mein Ziel, dass Sie sich besser bewegen, sich stärker fühlen und mit mehr Vitalität leben als gestern. Ihr Weg zum Wohlbefinden ist persönlich, und ich fühle mich geehrt, ein Teil davon zu sein."
+                                Ich habe früh gemerkt, dass ich mit meinen Händen viel Gutes bewegen kann. Seit 2014 arbeite ich als klassischer Masseur. Durch stetige Weiterbildungen, unter anderem in der Energetikarbeit, Schröpfen sowie der Gesundheits- und Sportberatung, habe ich mein Wissen kontinuierlich vertieft. Das Helfen ist mehr als ein Beruf für mich – es ist meine Lebensaufgabe.
                             </p>
                         </div>
 
                         <div className="mt-10 p-6 bg-white rounded-2xl border border-border/50 shadow-sm relative italic text-foreground/80">
                             <Quote className="absolute -top-4 -left-4 w-10 h-10 text-primary/20" />
-                            Ich glaube an eine Welt, in der jeder Zugang zur besten Version seiner selbst hat.
+                            Jeder Mensch ist einzigartig und deshalb braucht er auch eine individuelle Behandlung.
                         </div>
                     </motion.div>
 
@@ -48,7 +46,7 @@ const OwnerSection = () => {
                     >
                         <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                             <img
-                                src="/images/jose-barassa.png"
+                                src={joseProfile}
                                 alt="Jose Barassa"
                                 className="w-full h-full object-cover"
                             />
