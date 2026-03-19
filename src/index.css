@@ -92,22 +92,22 @@
 
   .theme-gold-blue {
     --background: 0 0% 100%;
-    --foreground: 222 60% 15%;
+    --foreground: 202 75% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 60% 15%;
+    --card-foreground: 202 75% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 60% 15%;
+    --popover-foreground: 202 75% 17%;
 
-    --primary: 222 80% 40%;
+    --primary: 202 75% 17%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 43 74% 49%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 20% 96%;
-    --muted-foreground: 222 30% 40%;
+    --muted: 202 30% 96%;
+    --muted-foreground: 202 40% 40%;
 
     --accent: 43 74% 49%;
     --accent-foreground: 0 0% 100%;
@@ -115,12 +115,12 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 20% 90%;
-    --input: 222 20% 90%;
-    --ring: 222 80% 40%;
+    --border: 202 20% 90%;
+    --input: 202 20% 90%;
+    --ring: 202 75% 17%;
 
-    --section-alt: 222 30% 97%;
-    --hero-overlay: 222 80% 20%;
+    --section-alt: 202 30% 97%;
+    --hero-overlay: 202 75% 10%;
   }
 }
 

@@ -53,7 +53,7 @@ const ColorSwitcher = () => {
                             className={`flex items-center gap-3 p-2 rounded-lg transition-colors text-sm text-left ${theme === "gold-blue" ? "bg-primary/10 font-medium" : "hover:bg-muted"}`}
                         >
                             <div className="flex gap-1 h-5 w-5 rounded-full overflow-hidden border border-border">
-                                <div className="w-1/2 h-full bg-[#124cae]" />
+                                <div className="w-1/2 h-full bg-[#0b354d]" />
                                 <div className="w-1/2 h-full bg-[#d4af37]" />
                             </div>
                             Premium (Blau/Gold)
